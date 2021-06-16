@@ -53,3 +53,9 @@ services:
       - ./host.cert:/etc/nginx/ssl/host.cert:ro
       - ./host.key:/etc/nginx/ssl/host.key:ro
 
+links:
+      - nodejs-api:nodejs-api
+    networks:
+      - net    
+networks:
+  net:
